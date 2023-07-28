@@ -26,6 +26,7 @@ export default function App() {
       })
   }, [])
 
+ 
   return (
     <div className='container'>
       <h1>My friends:</h1>
@@ -38,7 +39,7 @@ export default function App() {
         })
       }
       {
-        currentFriendId && <Details friendId={currentFriendId} close={closeDetails} />
+        currentFriendId && <Details openDetails = {openDetails} friendId={currentFriendId} close={closeDetails} />
       }
     </div>
   )
