@@ -1,4 +1,4 @@
-// This is for the fake API. Do not delete!
+// !This is for the fake API. Do not delete!
 import { worker } from './api-mocks/browser'
 worker.start()
 
@@ -7,9 +7,15 @@ import { render } from 'react-dom'
 
 import App from './components/App'
 
+import theme from './theme/index';
+import { ThemeProvider } from 'styled-components'
+
 import './styles.css'
 
 render(
-  <App />,
+  <ThemeProvider theme = {theme}>
+   <App /> 
+  </ThemeProvider>
+  ,
   document.querySelector('#root')
 )
